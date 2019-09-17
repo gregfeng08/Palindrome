@@ -13,12 +13,13 @@ int main() {
   for (int i = 0, l = 0; i <= strlen(input1); i++) 
     
     {
-      if((input1[i] != ' ') && (ispunct(input1[i]) == false)) {//If the character in the input does not contain a space or any punctuation, copy it into another string. Use of variable l is to remove spaces
+      if((input1[i] != ' ') && (ispunct(input1[i]) == false) && (input1[i] != '"')) {//If the character in the input does not contain a space or any punctuation, copy it into another string. Use of variable l is to remove spaces
 	
 	newInput[l] = tolower(input1[i]);
         l++;
 	}
     }
+  cout << newInput << endl;
   for (int i = 0, j = strlen(newInput)-1; i < j; i++, --j) {//Initializes an array and a reverse array such that the middle value in the input is ignored because its a palindrome anyways.
     if (palindromeorno == true) { //As long as the two values compared are equal, keep checking until done
       if (!(newInput[i] == newInput[j])) {
@@ -31,6 +32,8 @@ int main() {
     cout << "The input entered was a palindrome!" << endl;
   } else {
     cout << "The input entered was not a palindrome!" << endl;
+  
   }
   return 0; //return
 }
+
