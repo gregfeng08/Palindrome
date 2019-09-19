@@ -1,7 +1,11 @@
 #include <cstring>
 #include <iostream>
 //used some bits of code from stackoverflow
-
+/*
+Created by: Gregory Feng
+Program Desc: This is a program that takes in an input and tells if it is a palindrome or not.
+Date last edited 9/19/19
+ */
 using namespace std;
 
 int main() {
